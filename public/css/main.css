@@ -917,6 +917,7 @@ body main section.key-topics .keys-wrap .key-item .content {
   }
 }
 body main section.agenda-time {
+  display: block;
   padding: 105px 0px 105px;
 }
 body main section.agenda-time .section-title {
