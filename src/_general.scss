@@ -1,0 +1,137 @@
+@use "global_wars" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+a {
+	text-decoration: none;
+	&.underline-link {
+		text-decoration: underline;
+		&:hover {
+			&::before {
+				content: none !important;
+			}
+		}
+	}
+}
+a img {
+	border: 0;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+
+.container {
+	max-width: 1270px;
+    width: 100%;
+    margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+	@include media($xxl){
+		max-width: 1024px;
+	}
+	@include media($xl){
+		max-width: 960px;
+	}
+	@include media($lg){
+		max-width: 768px;
+	}
+	@include media($md){
+		width: 570px;
+	}
+	@include media($sm){
+		width: 375px;
+	}
+	@include media($xs){
+		width: 100%;
+	}
+}
+.display-flex {
+	display: flex;
+}
+
+@include font-face('Calibri', '../fonts/calibri/calibri');
+@include font-face('Calibri Bold', '../fonts/calibri/calibri_bold');
+
+.btn-wrap {
+	.btn-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0px 105px 0px;
+		height: 30px;
+		border-radius: 5px;
+		font-family: Calibri;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 100%;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		transition: 0.2s;
+		@include media($md){
+			width: 100%;
+			padding: 0px 38px 0px;
+			font-size: 18px;
+		}
+		@include media($sm){
+			width: 100%;
+			padding: 0px 15px 0px;
+			font-size: 10px;
+			height: 12px;
+			border-radius: 2px;
+		}
+		&.btn-red {
+			background-color: #A8285D;
+			color: #ffffff;
+			&:hover {
+				background-color: #1F4E9D;
+				color: #F2C148;
+				transition: 0.2s;
+			}	
+		}
+		&.btn-blue {
+			background-color: #1F4E9D;
+			color: #ffffff;
+			&:hover {
+				background-color: #A8285D;
+				color: #F2C148;
+				transition: 0.2s;
+			}	
+		}
+		&.btn-yellow {
+            background-color: #F2C148;
+			color: #000000;
+			&:hover {
+				background-color: #ffffff;
+				color: #1F4E9D;
+				transition: 0.2s;
+			}	
+		}
+	}
+}

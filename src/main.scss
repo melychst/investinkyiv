@@ -1,0 +1,1377 @@
+@use '_general' as *;
+@use '_global_wars' as *;
+
+body {
+    font-family: Calibri;
+    header {
+        width: 100%;
+        height: auto;
+        padding-top: 50px;
+        .columns {
+            display: grid;
+            grid-template-columns: 302px 1fr;
+            grid-gap: 50px;
+            justify-content: space-between;
+            @include media($xl){
+                grid-template-columns: 302px auto;
+            }
+            @include media($md){
+                grid-template-columns: 250px 250px;
+            }
+            @include media($sm){
+                grid-template-columns: 130px 130px;
+                grid-gap: 0px;
+            }
+            .logo-wrap {
+                img {
+                    width: 100%;
+                }
+            }
+            .sub-columns {
+                display: grid;
+                grid-template-columns: 1fr 30px;
+                grid-gap: 106px;
+                height: 100%;
+                padding-top: 15px;
+                @include media($xxl){
+                    grid-gap: 25px;
+                }
+                @include media($xl){
+                    grid-template-columns: 1fr;
+                    grid-gap: 0px;
+                }
+                 @include media($sm){
+                    padding-top: 5px;
+                 }
+            }
+            .sub-column-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: end;
+                 @include media($xl){
+                    order: 2;
+                    align-self: end;
+                }
+                .top-row {
+                    width: 100%;
+                    text-align: right;
+                    .btn-link {
+                        width: 358px;
+                        justify-self: end;
+                         @include media($md){
+                            width: 100%;
+                         }
+                    }
+                }
+                .navigation-row {
+                    width: 100%;
+                    text-align: right;
+                   @include media($xl){
+                       display: none;
+                    }
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        li {
+                            display: inline-block;
+                            a {
+                                font-family: Calibri;
+                                font-weight: 700;
+                                font-size: 22px;
+                                line-height: 100%;
+                                letter-spacing: 0.05em;
+                                text-transform: uppercase;
+                                color: #1F4E9D;
+                                transition: 0.2s;
+                                   @include media($xxl){
+                                        font-size: 20px;
+                                    }
+                                &:hover {
+                                    color: #A8285D;
+                                    transition: 0.2s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sub-column-right {
+                @include media($xl){
+                    order: 1;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .mobile-burger {
+                display: none;
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    @include media($sm){
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+                @include media($xl){
+                    display: block;
+                }
+                .close-burger {
+                    display: none;
+                    position: relative;
+                    top: -1px;
+                    @include media($sm){
+                        top: 0px;
+                    }
+                }
+            }
+            .social-links {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include media($xl){
+                    flex-direction: row;
+                    justify-content: end;
+                }
+                .social-link {
+                    @include media($xl){
+                        margin-left: 10px;
+                    }
+                    svg {
+                        @include media($sm){
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main {
+        section {
+            display: none;
+            position: relative;
+            .section-title {
+                font-family: Calibri;
+                font-weight: 700;
+                font-style: Bold;
+                font-size: 66px;
+                line-height: 65px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                @include media($xl){
+                    font-size: 36px;
+                    line-height: 35px;
+                }
+                @include media($sm){
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+            }
+            &.hero {
+                display: block;
+                overflow: hidden;
+                .image-bg-wrap {
+                    width: 100%;
+                    position: relative;
+                    bottom: -4px;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+
+                    }
+                }
+            }
+            &.agenda {
+                display: block;
+                padding: 100px 0px 120px;
+                background-color: #1F4E9D; 
+                color: #ffffff;
+                @include media($xxl){
+                    padding: 100px 0px 220px;
+                }
+                @include media($md){
+                    padding: 23px 0px 120px;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 265px;
+                    height: 582px;
+                    background-image: url(../images/agenda_bg.svg);
+                    background-size: cover;
+                    background-position: center;
+                    position: absolute;
+                    bottom: 50px;
+                    right: 0px;
+                    @include media($xxl){
+                        width: 180px;
+                        height: 398px;
+                        transform: rotate(90deg);
+                        bottom: -109px;
+                        right: 112px;
+                    }
+                    @include media($md){
+                        width: 100px;
+                        height: 220px;
+                        bottom: -60px;
+                        right: 63px;
+                    }
+                }
+                span {
+                    color: #F2C148;
+                }
+                .btn-wrap {
+                    width: 548px;
+                    margin-bottom: 45px;
+                    @include media($sm){
+                        width: 100%;
+                        margin-bottom: 23px;
+                    }
+                    .btn-link  {
+                        padding-left: 200px;
+                        padding-right: 200px;
+                        @include media($sm){
+                            padding-left: 50px;
+                            padding-right: 50px;
+                            height: 15px;
+                        }
+                    }
+                }
+                .section-title {
+                    margin-bottom: 46px;
+                    @include media($sm){
+                        margin-bottom: 17px;
+                    }
+                }
+                .section-content {
+                    width: 920px;
+                    font-family: Calibri;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 24px;
+                    line-height: 30px;
+                    letter-spacing: 0%;
+                    @include media($xxl){
+                        width: 100%;
+                    }
+                    @include media($sm){
+                        font-size: 12px;
+                        line-height: 13px;
+                    }
+                    ul {
+                        padding-left: 48px;
+                        @include media($md){
+                            padding-left: 0px;  
+                        }
+                        li {
+                            margin-bottom: 45px;
+                            list-style: none;
+                            padding-left: 60px;
+                            position: relative;
+                            @include media($sm){
+                                margin-bottom: 24px;
+                                padding-left: 36px;
+                            }
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 0px;
+                                left: 0px;
+                                display: block;
+                                width: 26px;
+                                height: 28px;
+                                background-image: url(../images/list-type.svg);
+                                background-position: center;
+                                background-size: cover;
+                                @include media($sm){
+                                    width: 16px;
+                                    height: 18px;
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                    span {
+                        color: #F2C148;
+                        font-weight: 700;
+                    }  
+                }
+            }
+            &.path {
+                display: block;
+                padding: 100px 0px 80px;
+                @include media($md){
+                    padding: 35px 0px 15px;
+                }
+                .section-title {
+                    color: #1F4E9D;
+                    margin-bottom: 30px;
+                    @include media($md){
+                        margin-bottom: 20px;
+                    }
+                    span {
+                        color: #A8285D;
+                    }
+                }
+                .section-content {
+                    font-family: Calibri;
+                    font-weight: 400;
+                    font-size: 31.87px;
+                    line-height: 42.26px;
+                    letter-spacing: 0.012em;
+                    color: #1F4E9D;
+                    width: 1028px;
+                    margin-bottom: 45px;
+                    @include media($xxl){
+                        width: 100%;
+                    }
+                    @include media($xl){
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    @include media($md){
+                        margin-bottom: 20px;
+                    }
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+                .bottom-row {
+                    .columns {
+                        display: grid;
+                        grid-template-columns: 490px 490px;
+                        justify-content: space-between;
+                        @include media($xl){
+                            grid-template-columns: 48% 48%;
+                        }
+                        @include media($md){
+                            grid-template-columns: 1fr;
+                        }
+                        a {
+                            font-family: Calibri;
+                            font-weight: 700;
+                            font-size: 22px;
+                            line-height: 100%;
+                            letter-spacing: 0.05%;
+                            text-transform: uppercase;
+                            height: 74px;
+                            display: flex;
+                            margin-bottom: 20px;
+                            @include media($xl){
+                                padding: 0px 25px;
+                            }
+                            @include media($md){
+                                height: 30px;
+                                font-size: 12px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                        span {
+                            display: block;
+                            font-family: Calibri;
+                            font-weight: 400;
+                            font-size: 26px;
+                            line-height: 30px;
+                            letter-spacing: 0.01em;
+                            @include media($xl){
+                                font-size: 18px;
+                                line-height: 24px;
+                            }
+                            @include media($md){
+                                margin-bottom: 15px;
+                                font-size: 12px;
+                                line-height: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.kif {
+                display: block;
+                padding: 96px 0px 76px;
+                background-color: #F2C148;
+                @include media($md){
+                    padding: 24px 0px 165px;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 384px;
+                    height: 555px;
+                    background-image: url(../images/kif_bg.svg);
+                    background-size: cover;
+                    background-position: center;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    @include media($xl){
+                        width: 240px;
+                        height: 346px;
+                    }
+                    @include media($md){
+                        transform: rotate(-90deg);
+                        bottom: -34px;
+                        left: 50px;
+                        top: auto;
+                        width: 150px;
+                        height: 217px;
+                    }
+                }
+                .container {
+                    padding-left: 420px;
+                    @include media($xl){
+                        padding-left: 250px;
+                    }
+                    @include media($md){
+                        padding-left: 15px;
+                    }
+                }
+                .section-title {
+                    color: #1F4E9D;
+                    margin-bottom: 40px;
+                    @include media($md){
+                        margin-bottom: 18px;
+                    }
+                }
+                .section-content {
+                    font-family: Calibri;
+                    font-weight: 400;
+                    font-size: 31.87px;
+                    line-height: 39px;
+                    letter-spacing: 0.01%;
+                    @include media($xl){
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    @include media($md){
+                        font-size: 14px;
+                        line-height: 15px;
+                    }
+                }
+            }
+            &.goals {
+                display: block;
+                padding: 103px 0px 98px;
+                @include media($md){
+                    padding: 25px 0px 60px;
+                }
+                .section-title {
+                    color: #A8285D;
+                    margin-bottom: 55px;
+                    @include media($sm){
+                        margin-bottom: 25px;
+                    }
+                }
+                .goals-wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .goal-item {
+                        display: flex;
+                        width: 47%;
+                        margin-bottom: 70px;
+                        @include media($xl){
+                            flex-direction: column;
+                        }
+                        @include media($lg){
+                            margin-bottom: 45px;
+                        }
+                        .icon-wrap {
+                            width: 90px;
+                            @include media($xl){
+                                margin-bottom: 17px;
+                            }
+                            @include media($lg){
+                                width: 60px;
+                            }
+                            @include media($sm){
+                                width: 40px;
+                            }
+                            img {
+                                max-width: 100%;
+                            }
+                        }
+                        .goal-content {
+                            width: calc(100% - 90px);
+                            padding-left: 32px;
+                            font-family: Calibri;
+                            font-weight: 400;
+                            font-size: 26px;
+                            line-height: 35px;
+                            letter-spacing: 0.01em;
+                            color: #1F4E9D;
+                            @include media($xl){
+                                width: 100%;
+                                padding-left: 0px;
+                            }
+                            @include media($sm){
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.key-topics {
+                display: block;
+                padding: 118px 0px 124px;
+                background-color: #1F4E9D;
+                color: #ffffff;
+                @include media($lg){
+                    padding: 30px 0px 56px;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 156px;
+                    height: 200px;
+                    top: 15px;
+                    // top: 50px;
+                    right: 0px;
+                    background-image: url(../images/keys_bg.svg);
+                    background-size: cover;
+                    background-position: center;
+                    z-index: 5;
+                    @include media($xl){
+                        width: 67px;
+                        height: 87px;
+                        top: 0px;
+                    }
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 202px;
+                    height: 202px;
+                    border-radius: 50%;
+                    background-color: #ffffff;
+                    position: absolute;
+                    top: -70px;
+                    right: 80px;
+                    border: 21px solid #1F4E9D;
+                    @include media($xl){
+                        width: 100px;
+                        height: 100px;
+                        border: 10px solid #1F4E9D;
+                        top: -40px;
+                        right: 40px;
+                    }
+                }
+                .section-title {
+                    margin-bottom: 38px;
+                }
+                .keys-wrap {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 32px;
+                    @include media($sm){
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 24px;
+                    }
+                    .key-item {
+                        .top-row {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: end;
+                            height: 70px;
+                            font-family: Calibri;
+                            font-weight: 700;
+                            font-size: 22px;
+                            line-height: 30px;
+                            letter-spacing: 0%;
+                            color: #F2C148;
+                            position: relative;
+                            padding-bottom: 3px;
+                            @include media($lg){
+                                font-size: 12px;
+                                line-height: 16px;
+                                height: 40px;
+                            }
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 3px;
+                                border-radius: 1px;
+                                background-color: #F2C148;
+                                position: absolute;
+                                left: 0px;
+                                bottom: 0px;
+                                @include media($sm){
+                                    height: 2px;
+                                }
+                            }
+                            @include media($lg){
+                                .icon-wrap {
+                                    height: 35px;
+                                    img {
+                                        max-width: 32px;
+                                    }
+                                }
+                            }
+                        }
+                        .content {
+                            padding-top: 15px;
+                            font-family: Calibri;
+                            font-weight: 700;
+                            font-size: 22px;
+                            line-height: 30px;
+                             @include media($lg){
+                                font-size: 12px;
+                                line-height: 14px;
+                                font-weight: 400;
+                            }
+                            @include media($sm){
+                                padding-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.agenda-time {
+                padding: 105px 0px 105px;
+                .section-title {
+                    color: #1F4E9D;
+                    margin-bottom: 48px;;
+                    span {
+                        color: #A8285D;
+                    }
+                }
+                .time-wrap {
+                    .top-row {
+                        .columns {
+                            display: flex;
+                            justify-content: space-between;
+                            .column {
+                                width: 604px;
+                                display: grid;
+                                grid-template-columns: 180px 392px;
+                                justify-content: space-between;
+                                font-family: Calibri;
+                                font-weight: 700;
+                                font-size: 22px;
+                                line-height: 100%;
+                                letter-spacing: 0.05em;
+                                text-transform: uppercase;
+                                color: #ffffff;
+                                .btn {
+                                    width: 100%;
+                                    height: 52px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 5px;
+                                }
+                                &.left-column {
+                                    .btn {
+                                        background-color: #A8285D;
+                                    }
+                                }
+                                &.right-column {
+                                    .btn {
+                                        background-color: #1F4E9D;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .conten-wrap {
+                        .row {
+                            min-height: 92px;
+                            display: grid;
+                            grid-template-columns: 180px 1fr;
+                            align-items: center;
+                            grid-gap: 32px;
+                            padding: 10px 0px;
+                            border-bottom: #F2C148 solid 1px;
+                            .btn-time {
+                                font-family: Calibri;
+                                font-weight: 700;
+                                font-size: 26px;
+                                line-height: 100%;
+                                letter-spacing: 0.05em;
+                                text-transform: uppercase;
+                                color: #A8285D;
+                                text-align: center;
+                            }
+                            .btn-activity {
+                                font-family: Calibri;
+                                font-weight: 700;
+                                font-size: 22px;
+                                line-height: 100%;
+                                letter-spacing: 0.01em;
+                                text-transform: uppercase;
+                                span {
+                                    color: #A8285D;
+                                }
+                            }
+                            &.row-columns {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                border-bottom: none;
+                            }
+                            .sub-column {
+                                .sub-row {
+                                    min-height: 92px;
+                                    display: grid;
+                                    grid-template-columns: 180px 1fr;
+                                    align-items: center;
+                                    grid-gap: 32px;
+                                    padding: 10px 0px;
+                                    border-bottom: #F2C148 solid 1px;
+                                }
+                                &.right-sub-column {
+                                    height: 100%;
+                                    .sub-row {
+                                        height: 100%;
+                                        min-height: 100%;
+                                        border-bottom: 0px;
+                                        background-color: #1F4E9D;
+                                        border-radius: 5px;
+                                        align-items: baseline;
+                                        padding-top: 32px;
+                                        padding-right: 50px;
+                                        .btn-time {
+                                            color: #ffffff;
+                                        }
+                                        .btn-activity {
+                                            color: #ffffff;
+                                            span {
+                                                color: #F2C148;
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.break-row {
+                                background-color: #fae6b6;
+                                .btn-activity {
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.speakers {
+                display: block;
+                padding: 96px 0px 92px;
+                background-color: #F2C148;
+                @include media($lg){
+                    padding: 25px 0px 186px;
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 290px;
+                    height: 618px;
+                    background-image: url(../images/speakers_bg.svg);
+                    background-position: center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    @include media($xl){
+                        width: 140px;
+                        height: 300px;
+                    }
+                    @include media($lg){
+                        transform: rotate(-90deg);
+                        top: auto;
+                        bottom: -85px;
+                        left: 90px;
+                    }
+                }
+                .container {
+                    padding-left: 424px;
+                    @include media($xl){
+                        padding-left: 320px;
+                    }
+                    @include media($lg){
+                        padding-left: 15px;
+                    }
+                }
+                .section-title {
+                    margin-bottom: 45px;
+                    color: #1F4E9D;
+                    @include media($lg){
+                        margin-bottom: 20px;
+                    }
+                }
+                .speakers-wrap {
+                    display: grid;
+                    grid-template-columns: 140px 140px 140px;
+                    grid-gap: 80px;
+                    justify-content: space-between;
+                    @include media($sm){
+                        grid-template-columns: 104px 104px;
+                        grid-gap: 50px;
+                    }
+                    .speaker-item {
+                        width: 140px;
+                        height: 140px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        background-color: #ffffff;
+                        @include media($md){
+                            width: 104px;
+                            height: 104px;
+                        }
+                    }
+                }
+            }
+            &.partners {
+                display: block;
+                padding: 85px 0px 45px;
+                @include media($xl){
+                    padding: 25px 0px 25px;
+                }
+                .section-title {
+                    color: #1F4E9D;
+                    margin-bottom: 72px;
+                    @include media($xl){
+                        margin-bottom: 20px;
+                    }
+                }
+                .partners-wrap {
+                    display: grid;
+                    grid-template-columns: 286px 286px 286px 286px;
+                    grid-gap: 40px;
+                    justify-content: space-between;
+                    @include media($xxl){
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-gap: 20px;
+                    }
+                    @include media($md){
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    .partner-item {
+                        width: 100%;
+                        height: 81px;
+                        background-color: #D9D9D9;
+                    }
+                }
+            }
+            &.forum-tabs {
+                display: block;
+                padding: 45px 0px 45px;
+                @include media($md){
+                    padding: 15px 0px 15px;
+                }
+                .section-title {
+                    color: #1F4E9D;
+                    margin-bottom: 55px;
+                    @include media($md){
+                        margin-bottom: 20px;
+                    }
+                    span {
+                        color: #A8285D;
+                    }
+                }
+                .tabs-title {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 32px;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    @include media($md){
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-gap: 10px;
+                    }
+                    .tab-title {
+                        display: flex;
+                        height: 52px;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: Calibri;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 100%;
+                        letter-spacing: 5%;
+                        text-transform: uppercase;
+                        color: #1F4E9D;
+                        background-color: #C3D1D6;
+                        border-radius: 5px;
+                        transition: 0.2s;
+                        cursor: pointer;
+                        @include media($md){
+                            font-size: 12px;
+                            height: 24px;
+                            border-radius: 2px;
+                        }
+                        &:nth-child(2n){
+                            @include media($md){
+                                margin-left: 10px;
+                            }
+                        }
+                        &:nth-child(2n + 1){
+                            @include media($md){
+                                margin-right: 10px;
+                            }
+                        }
+                        &:hover {
+                            background-color: #FABF3B;
+                            transition: 0.2s;
+                        }
+                        &.active {
+                            background-color: #FABF3B;
+                        }
+                    }
+                }
+                .tabs-content {
+                    .tab-content {
+                        display: none;
+                        &.active {
+                            display: block;
+                        }
+                    }
+                    .sub-title {
+                        font-family: Calibri;
+                        font-weight: 700;
+                        font-size: 44.01px;
+                        line-height: 44.01px;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        color: #1F4E9D;
+                        @include media($xl){
+                            font-size: 24.01px;
+                            line-height: 24.01px;
+                        }
+                        @include media($md){
+                            font-size: 16px;
+                            line-height: 16px;
+                        }
+                        span {
+                            color: #A8285D;
+                        }
+                    }
+                    .top-row {
+                        margin-bottom: 40px;
+                        @include media($md){
+                            margin-bottom: 18px;
+                        }
+                        .columns {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .left-column {
+                                width: 710px;
+                            }
+                            .right-column {
+                                width: 460px;
+                                img {
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .content-row {
+                        .columns {
+                            display: flex;
+                            justify-content: space-between;
+                            @include media($md){
+                                flex-direction: column;
+                            }
+                            .left-column {
+                                width: 710px;
+                                @include media($md){
+                                    width: 100%;
+                                }
+                            }
+                            .right-column {
+                                width: 465px;
+                                @include media($md){
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .row {
+                            display: grid;
+                            grid-template-columns: 160px 1fr;
+                            @include media($md){
+                                grid-template-columns: 100px 1fr;  
+                            }
+                            .name {
+                                font-family: Calibri;
+                                font-weight: 700;
+                                font-size: 22px;
+                                line-height: 100%;
+                                letter-spacing: 0.05em;
+                                text-transform: uppercase;
+                                color: #1F4E9D;
+                                margin-top: 5px;
+                                padding-right: 20px;
+                                @include media($xl){
+                                    font-size: 14px;
+                                }
+                                @include media($md){
+                                    font-size: 12px;
+                                    padding-right: 10px;
+                                }
+                            }
+                            .description {
+                                font-family: Calibri;
+                                font-weight: 700;
+                                font-size: 26px;
+                                line-height: 32px;
+                                letter-spacing: 0.02em;
+                                @include media($xl){
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                }
+                                @include media($md){
+                                    font-size: 12px;
+                                    line-height: 16px;
+                                }
+                                p {
+                                    margin-bottom: 20px;
+                                    @include media($md){
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        .content {
+                            font-family: Calibri;
+                            font-weight: 300;
+                            font-size: 18px;
+                            line-height: 110%;
+                            letter-spacing: 0%;
+                            @include media($xl){
+                                font-size: 14px;
+                            }
+                            @include media($md){
+                                font-size: 12px;
+                                margin-top: 15px;
+                            }
+                            li {
+                                margin-bottom: 20px;
+                                list-style: none;
+                                position: relative;
+                                padding-left: 18px;
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    background-color: #FABF3B;
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 4px;
+                                }
+                                &:last-child{
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.news {
+                display: block;
+                padding: 45px 0px 50px;
+                @include media($lg){
+                    padding: 20px 0px 28px;
+                }
+                .section-title {
+                    color: #A8285D;
+                    margin-bottom: 58px;
+                    @include media($lg){
+                        margin-bottom: 25px;
+                    }
+                }
+                .columns {
+                    display: flex;
+                    justify-content: space-between;
+                    @include media($lg){
+                        flex-direction: column;
+                    }
+                    .left-column {
+                        width: 710px;
+                        @include media($xxl){
+                            width: 55%;
+                        }
+                        @include media($lg){
+                            width: 100%;
+                        }
+                    }
+                    .right-column {
+                        width: calc(100% - 750px);
+                        display: flex;
+                        align-items: center;
+                        padding-top: 1px;
+                        @include media($xxl){
+                            width: 40%;
+                        }
+                         @include media($lg){
+                            width: 100%;
+                            padding-top: 50px;
+                        }
+                    }
+                    .featured-post {
+                        .image-wrap {
+                            img {
+                                width: 100%;
+                                max-width: 100%;
+                            }
+                        }
+                        .news-meta {
+                            padding-top: 20px;
+                        }
+                        .description {
+                            padding-top: 10px;
+                        }
+                        a {
+                            color: #000000;
+                            font-weight: bold;
+                            font-size: 25px;
+                            @include media($lg){
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .news-wrap {
+                        .row {
+                            padding-bottom: 24px;
+                            margin-bottom: 24px;
+                            border-bottom: 1px solid #D9D9D9;
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+                            .date {
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 139.187%;
+                                color: #525252;
+                                margin-bottom: 10px;
+                                padding-left: 22px;
+                                position: relative;
+                                @include media($lg){
+                                    font-size: 12px;
+                                }
+                                &::before {
+                                    content: '';
+                                    width: 22px;
+                                    height: 22px;
+                                    position: absolute;
+                                    display: block;
+                                    left: -2px;
+                                    left: -2px;
+                                    top: -1px;
+                                    background-image: url(../images/calendar.svg);
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    @include media($lg){
+                                        width: 12px;
+                                        height: 15px;
+                                        top: 1px;
+                                    }
+                                }
+                            }
+                            a {
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 139.187%;
+                                color: #000000;
+                                transition: 0.2s;
+                                @include media($lg){
+                                    font-size: 14px;
+                                }
+                                &:hover {
+                                    color: #4d4d4d;
+                                    transition: 0.2s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        height: auto;
+        padding-top: 54px;
+        background-color: #F2C148;
+        overflow: hidden;
+        .columns {
+            display: grid;
+            grid-template-columns: 302px 1fr 30px;
+            @include media($xl){
+                grid-template-columns: 245px 1fr 30px;
+            }
+            @include media($lg){
+                grid-template-columns: 45% 45%;
+                justify-content: space-between;
+            }
+            .logo-wrap {
+                img {
+                    width: 100%;
+                }
+            }
+            .btn-link {
+                @include media($lg){
+                    padding: 0px 25px;
+                }
+            }
+            .column-left {
+                @include media($lg){
+                    order: 1;  
+                }
+            }
+            .column-center {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: end;
+                padding-right: 75px;
+                padding-left: 50px;
+                @include media($xxl){
+                    padding-right: 25px;
+                    padding-left: 25px;
+                }
+                @include media($lg){
+                    order: 3;
+                    grid-column-start: span 2;
+                    padding-right: 0px;
+                    padding-left: 0px;
+                }
+                .top-row {
+                    width: 100%;
+                    padding-top: 12px;
+                    .sub-columns {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        text-align: right;
+                        @include media($lg){
+                            flex-direction: column;
+                        }
+                        .left-column {
+                            width: 340px;
+                            text-align: left;
+                            font-family: Calibri;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 21px;
+                            letter-spacing: 0.02em;
+                            @include media($xxl){
+                                width: 300px;
+                                font-size: 14px;
+                            }
+                            @include media($lg){
+                                width: 100%;
+                                order: 2;
+                                font-size: 18px;
+                                margin-top: 10px;
+                            }
+                        }
+                        .right-column {
+                            width: 358px;
+                            @include media($xxl){
+                                width: 300px;
+                            }
+                            @include media($lg){
+                                width: 100%;
+                                order: 1;
+                            }
+                            .btn-link {
+                                width: 100%;
+                                padding: 0px 50px 0px;
+                                text-align: center;
+                                @include media($sm){
+                                    height: 26px;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .navigation-row {
+                    width: 100%;
+                    text-align: right;
+                    @include media($lg){
+                        display: none;
+                    }
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        li {
+                            display: inline-block;
+                            a {
+                                font-family: Calibri;
+                                font-weight: 700;
+                                font-style: Bold;
+                                font-size: 22px;
+                                line-height: 100%;
+                                letter-spacing: 0.05em;
+                                text-transform: uppercase;
+                                color: #1F4E9D;
+                                transition: 0.2s;
+                                @include media($xl){
+                                    font-size: 18px;
+                                }
+                                &:hover {
+                                    color: #A8285D;
+                                    transition: 0.2s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .column-right {
+                @include media($lg){
+                    order: 2;
+                }
+                .mobile-btn {
+                    display: none;
+                    @include media($lg){
+                        display: block;
+                    }
+                }
+                .social-links {
+                    padding-top: 12px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    @include media($lg){
+                        flex-direction: row;
+                        height: auto;
+                        margin-bottom: 10px;
+                    }
+                    @include media($sm){
+                        padding-top: 8px;
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .image-bg-wrap {
+            margin-top: 20px;
+            position: relative;
+            bottom: -4px;
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

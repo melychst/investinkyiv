@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="columns">
+                <div class="column column-left">
+                    <div class="logo-wrap">
+                        <img src="../public/images/header_logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="column column-right">
+                    <div class="sub-columns">
+                        <div class="sub-column sub-column-left">
+                            <div class="top-row">
+                                <div class="btn-wrap">
+                                    <a class="btn-link btn-red" href="#">Registration</a>
+                                </div>
+                            </div>
+                            <div class="navigation-row">
+                                <ul class="navigation">
+                                    <li><a href="#">about kif 2025</a></li>
+                                    <li><a href="#">agenda</a></li>
+                                    <li><a href="#">speakers</a></li>
+                                    <li><a href="#">parnters</a></li>
+                                    <li><a href="#">news</a></li>  
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-column sub-column-right">
+                            <div class="mobile-burger">
+                                <span class="btn-mobile-nav open-burger">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_136_161)">
+                                <path d="M11.603 15.4844C9.04288 15.4844 6.48279 15.4844 3.92271 15.4844C3.75754 15.4431 3.59238 15.4431 3.42721 15.4018C1.73425 15.0302 0.619375 13.9566 0.123875 12.3049C0.0412917 12.0572 0.0412917 11.8507 0 11.603C0 9.04287 0 6.48279 0 3.92271C0 3.88141 0.0412917 3.79883 0.0412917 3.75754C0.0825833 3.34462 0.165167 2.93171 0.371625 2.56008C1.15617 0.908415 2.43621 0.0412896 4.25304 0.0412896C6.60667 -2.04146e-06 8.96029 0.0412896 11.2726 0.0412896C12.0159 0.0412896 12.7178 0.206456 13.3372 0.578081C14.7411 1.40391 15.4844 2.68396 15.4844 4.29433C15.4844 6.60666 15.4844 8.919 15.4844 11.2313C15.4844 11.5204 15.4844 11.8094 15.4018 12.0985C15.0302 13.7914 13.9979 14.9063 12.3049 15.3605C12.0572 15.4431 11.8094 15.4431 11.603 15.4844ZM14.576 7.76283C14.576 6.60666 14.576 5.4505 14.576 4.29433C14.576 4.04658 14.576 3.75754 14.4934 3.50979C14.1217 1.94071 12.8417 0.908415 11.2313 0.908415C8.919 0.908415 6.56537 0.908415 4.25304 0.908415C4.00529 0.908415 3.75754 0.908415 3.50979 0.990998C1.94071 1.36262 0.908417 2.64266 0.908417 4.25304C0.908417 6.56537 0.908417 8.919 0.908417 11.2313C0.908417 11.4791 0.908417 11.7268 0.991 11.9746C1.32133 13.5024 2.64267 14.576 4.21175 14.576C6.56537 14.576 8.919 14.576 11.2726 14.576C11.7268 14.576 12.2223 14.4934 12.6353 14.2869C13.9153 13.6675 14.576 12.6352 14.576 11.2313C14.576 10.0752 14.576 8.919 14.576 7.76283Z" fill="#005898"/>
+                                <line x1="3.51611" y1="5.52872" x2="12.1309" y2="5.52872" stroke="#005898" stroke-linecap="round"/>
+                                <line x1="3.51611" y1="7.52933" x2="12.1309" y2="7.52933" stroke="#005898" stroke-linecap="round"/>
+                                <line x1="3.51611" y1="9.52686" x2="8.5415" y2="9.52686" stroke="#005898" stroke-linecap="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_136_161">
+                                <rect width="15.4844" height="15.4844" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                    </svg>
+                                </span>
+                                <span class="btn-mobile-nav close-burger">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_136_130)">
+                                    <path d="M11.603 15.9687C9.04288 15.9687 6.48279 15.9687 3.92271 15.9687C3.75754 15.9275 3.59238 15.9275 3.42721 15.8862C1.73425 15.5145 0.619375 14.441 0.123875 12.7893C0.0412917 12.5415 0.0412917 12.3351 0 12.0873C0 9.52725 0 6.96716 0 4.40708C0 4.36579 0.0412917 4.28321 0.0412917 4.24191C0.0825833 3.829 0.165167 3.41608 0.371625 3.04446C1.15617 1.39279 2.43621 0.525665 4.25304 0.525665C6.60667 0.484373 8.96029 0.525665 11.2726 0.525665C12.0159 0.525665 12.7178 0.690831 13.3372 1.06246C14.7411 1.88829 15.4844 3.16833 15.4844 4.77871C15.4844 7.09104 15.4844 9.40337 15.4844 11.7157C15.4844 12.0047 15.4844 12.2938 15.4018 12.5828C15.0302 14.2758 13.9979 15.3907 12.3049 15.8449C12.0572 15.9275 11.8094 15.9275 11.603 15.9687ZM14.576 8.24721C14.576 7.09104 14.576 5.93487 14.576 4.77871C14.576 4.53096 14.576 4.24191 14.4934 3.99416C14.1217 2.42508 12.8417 1.39279 11.2313 1.39279C8.919 1.39279 6.56537 1.39279 4.25304 1.39279C4.00529 1.39279 3.75754 1.39279 3.50979 1.47537C1.94071 1.847 0.908417 3.12704 0.908417 4.73741C0.908417 7.04975 0.908417 9.40337 0.908417 11.7157C0.908417 11.9635 0.908417 12.2112 0.991 12.459C1.32133 13.9867 2.64267 15.0603 4.21175 15.0603C6.56537 15.0603 8.919 15.0603 11.2726 15.0603C11.7268 15.0603 12.2223 14.9777 12.6353 14.7713C13.9153 14.1519 14.576 13.1196 14.576 11.7157C14.576 10.5595 14.576 9.40337 14.576 8.24721Z" fill="#005898"/>
+                                    <line x1="4.82234" y1="5.40387" x2="10.9139" y2="11.4954" stroke="#005898" stroke-linecap="round"/>
+                                    <line x1="4.83154" y1="11.5339" x2="10.9231" y2="5.44231" stroke="#005898" stroke-linecap="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_136_130">
+                                    <rect width="15.4844" height="15.4844" fill="white" transform="translate(0 0.484375)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link instagram-link">
+                                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_9_5591)">
+                                    <path d="M22.48 30.2414C17.52 30.2414 12.56 30.2414 7.6 30.2414C7.28 30.1614 6.96 30.1614 6.64 30.0814C3.36 29.3614 1.2 27.2814 0.24 24.0814C0.08 23.6014 0.08 23.2014 0 22.7214C0 17.7614 0 12.8014 0 7.84144C0 7.76144 0.08 7.60144 0.08 7.52144C0.16 6.72144 0.32 5.92144 0.72 5.20144C2.24 2.00144 4.72 0.321437 8.24 0.321437C12.8 0.241437 17.36 0.321437 21.84 0.321437C23.28 0.321437 24.64 0.641437 25.84 1.36144C28.56 2.96144 30 5.44144 30 8.56144C30 13.0414 30 17.5214 30 22.0014C30 22.5614 30 23.1214 29.84 23.6814C29.12 26.9614 27.12 29.1214 23.84 30.0014C23.36 30.1614 22.88 30.1614 22.48 30.2414ZM28.24 15.2814C28.24 13.0414 28.24 10.8014 28.24 8.56144C28.24 8.08144 28.24 7.52144 28.08 7.04144C27.36 4.00144 24.88 2.00144 21.76 2.00144C17.28 2.00144 12.72 2.00144 8.24 2.00144C7.76 2.00144 7.28 2.00144 6.8 2.16144C3.76 2.88144 1.76 5.36144 1.76 8.48144C1.76 12.9614 1.76 17.5214 1.76 22.0014C1.76 22.4814 1.76 22.9614 1.92 23.4414C2.56 26.4014 5.12 28.4814 8.16 28.4814C12.72 28.4814 17.28 28.4814 21.84 28.4814C22.72 28.4814 23.68 28.3214 24.48 27.9214C26.96 26.7214 28.24 24.7214 28.24 22.0014C28.24 19.7614 28.24 17.5214 28.24 15.2814Z" fill="#005898"/>
+                                    <path d="M15.04 23.4414C10.56 23.4414 6.80005 19.7614 6.80005 15.2814C6.80005 10.8014 10.48 7.12144 14.96 7.04144C19.44 7.04144 23.2 10.7214 23.2 15.2014C23.2 19.7614 19.52 23.4414 15.04 23.4414ZM21.44 15.2814C21.44 11.7614 18.56 8.80143 15.04 8.80143C11.52 8.80143 8.64005 11.6814 8.56005 15.2014C8.56005 18.7214 11.44 21.6814 14.96 21.6814C18.48 21.7614 21.44 18.8014 21.44 15.2814Z" fill="#005898"/>
+                                    <path d="M23.44 8.96144C22.08 8.96144 21.04 7.84144 21.04 6.56144C21.04 5.28144 22.16 4.16144 23.44 4.16144C24.72 4.16144 25.84 5.28144 25.84 6.56144C25.84 7.84144 24.72 8.96144 23.44 8.96144ZM23.44 5.92144C23.12 5.92144 22.8 6.24144 22.8 6.56144C22.8 6.88144 23.12 7.28144 23.44 7.28144C23.76 7.28144 24.08 6.96144 24.08 6.64144C24.08 6.24144 23.76 5.92144 23.44 5.92144Z" fill="#005898"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_9_5591">
+                                    <rect width="30" height="30" fill="white" transform="translate(0 0.24144)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link facebook-link">
+                                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_9_5581)">
+                                    <path d="M30 8.89262C30 8.41389 30 8.01496 29.9202 7.69581C29.2819 3.78624 26.0106 0.913895 22.0213 0.913895C17.3138 0.913895 12.6862 0.913895 7.97872 0.913895C7.5 0.913895 7.10106 0.913895 6.70213 0.993682C2.71277 1.71177 0 4.90326 0 8.97241C0 13.6001 0 18.2277 0 22.8554C0 23.3341 0 23.8128 0.0797872 24.132C0.638298 28.0416 3.90957 30.8341 7.89894 30.9139C9.65425 30.9139 11.4096 30.9139 13.2447 30.9139H15.3989C15.9574 30.9139 16.2766 30.5947 16.2766 30.0362C16.2766 26.6852 16.2766 23.3341 16.2766 19.9033C16.2766 19.265 15.9574 18.9458 15.3191 18.9458C14.7606 18.9458 14.2021 18.9458 13.6436 18.9458H12.766V16.5522H13.6436C14.2021 16.5522 14.7606 16.5522 15.3191 16.5522C15.9574 16.5522 16.2766 16.233 16.2766 15.5947V14.4777C16.2766 13.5203 16.2766 12.5628 16.2766 11.6054C16.2766 10.249 16.8351 9.29155 18.1915 8.73304C19.3085 8.25432 20.5851 8.01496 22.1011 8.17453C22.3404 8.17453 22.5798 8.25432 22.8989 8.25432H23.0585V10.4884H21.0638C19.7074 10.4884 18.9096 11.2064 18.8298 12.483C18.75 13.2011 18.8298 13.999 18.8298 14.7171C18.8298 15.0362 18.8298 15.2756 18.8298 15.5947C18.8298 16.233 19.1489 16.5522 19.7872 16.5522C20.4255 16.5522 21.0638 16.5522 21.7021 16.5522H22.6596L22.2606 18.9458H21.6223C20.984 18.9458 20.4255 18.9458 19.7872 18.9458C19.1489 18.9458 18.8298 19.265 18.8298 19.9033V20.1426V20.2224V30.0362C18.8298 30.2756 18.9096 30.515 19.0691 30.6745C19.2287 30.8341 19.4681 30.9139 19.7074 30.9139H20.4255C20.6649 30.9139 20.9043 30.9139 21.1436 30.9139C21.5426 30.9139 21.9415 30.9139 22.3404 30.9139C22.8191 30.9139 23.2979 30.8341 23.7766 30.7543C27.5266 29.9564 30.0798 26.8447 30.0798 22.9352C30 18.2277 30 13.6001 30 8.89262ZM20.4255 20.6213H21.2234C21.7021 20.6213 22.2606 20.6213 22.7394 20.6213C23.2979 20.6213 23.617 20.382 23.6968 19.9033C23.9362 18.5469 24.0957 17.2703 24.3351 15.9139C24.3351 15.6745 24.3351 15.4352 24.1755 15.2756C24.016 15.116 23.6968 14.9564 23.3777 14.9564C22.7394 14.9564 22.1011 14.9564 21.383 14.9564H20.4255V14.8767C20.4255 14.6373 20.4255 14.4777 20.4255 14.2384C20.4255 13.7596 20.4255 13.2011 20.4255 12.7224C20.4255 12.3235 20.5053 12.2437 20.984 12.2437H23.617C24.3351 12.2437 24.6543 11.9245 24.6543 11.2862C24.6543 10.1692 24.6543 8.97241 24.6543 7.85538C24.6543 7.21709 24.4149 6.97772 23.8564 6.89794C21.3032 6.41921 19.2287 6.57879 17.3936 7.37666C15.8777 8.01496 15 9.13198 14.6809 10.5682C14.6011 10.8873 14.6011 11.2064 14.6011 11.6054C14.6011 12.4033 14.6011 13.2011 14.6011 13.9192V15.0362H13.6436C13.0851 15.0362 12.5266 15.0362 11.9681 15.0362C11.3298 15.0362 11.0106 15.3554 11.0106 15.9139C11.0106 17.1905 11.0106 18.4671 11.0106 19.8235C11.0106 20.2224 11.1702 20.7011 11.9681 20.7011C12.6064 20.7011 13.2447 20.7011 13.883 20.7011H14.5213V29.3181H12.4468C10.9309 29.3181 9.49468 29.3181 7.97872 29.3181C4.78723 29.3181 2.31383 27.2437 1.67553 24.132C1.59574 23.8128 1.59574 23.4937 1.59574 23.0947C1.59574 18.3873 1.59574 13.6799 1.59574 8.97241C1.59574 5.8607 3.75 3.30751 6.8617 2.749C7.18085 2.58943 7.57979 2.58943 7.97872 2.58943C12.6064 2.58943 17.3138 2.58943 21.9415 2.58943C25.133 2.58943 27.6064 4.66389 28.1649 7.7756C28.2447 8.09475 28.2447 8.41389 28.2447 8.89262C28.2447 13.6001 28.2447 18.2277 28.2447 22.9352C28.2447 26.4458 25.4521 29.2384 21.9415 29.2384C21.5426 29.2384 21.1436 29.2384 20.7447 29.2384H20.4255V20.6213Z" fill="#005898"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_9_5581">
+                                    <rect width="30" height="30" fill="white" transform="translate(0 0.913895)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="image-bg-wrap">
+                <img src="images/header_bg.svg" alt="">
+            </div>
+        </section>
+        <section class="agenda">
+            <div class="container">
+                <div class="btn-wrap">
+                    <a class="btn-link btn-yellow" href="#" target="_blank">agenda 2025</a>
+                </div>
+                <h2 class="section-title"><span>Kyiv Investment Forum 2025:</span></br>Berlin Platform</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Building upon the momentum of previous editions, the 9th Kyiv Investment Forum will take place <span>in Berlin on November 12, 2025</span> — uniting bold ideas, global leaders, and breakthrough partnerships in one of Europe’s most dynamic cities.</li>
+                        <li>This year’s <span>Forum is more than a conversation</span> — it’s a shared commitment. Hosted in Berlin, a symbol of resilience and innovation, the event will spotlight how Kyiv’s recovery and Europe’s future are deeply connected.</li>
+                        <li>Under the theme <span>“Investing in Resilience. Shaping the Future,”</span> we’ll activate new opportunities for investment, collaboration, and long-term impact.</li>
+                    </ul>
+                </div>
+            </div>
+        </section> 
+        <section class="path">
+            <div class="container">
+                <h2 class="section-title">Your Path </br> <span>to Participation</span></h2>
+                <div class="section-content"><strong>Kyiv Investment Forum 2025:</strong> Berlin Platform is an exclusive event reserved for invited guests only. To ensure your participation, please choose one of the following options:</div>
+                <div class="bottom-row">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="btn-wrap">
+                                 <a class="btn-link btn-red" href="#">Request an Invitation</a>
+                                 <span>Please submit a request for consideration</span>
+                            </div>
+                        </div>
+                         <div class="column">
+                            <div class="btn-wrap">
+                                 <a class="btn-link btn-blue" href="#">Register with Invitation</a>
+                                 <span>Please register and secure your participation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="kif">
+            <div class="container">
+                <h2 class="section-title">KIF 2025: </br>Berlin Platform</h2>
+                <div class="section-content">Uniting global investors, private sector leaders, visionary changemakers, and resilient cities to drive Ukraine’s recovery, scale social impact, and foster inclusive growth — strengthening city-to-city cooperation as a foundation for a more united and resilient Europe.</div>
+            </div>
+        </section>
+        <section class="goals">
+            <div class="container">
+                <h2 class="section-title">Our goals:</h2>
+                <div class="goals-wrap">
+                    <div class="goal-item">
+                        <div class="icon-wrap">
+                            <img src="images/goal_1.svg" alt="">
+                        </div>
+                        <div class="goal-content">Accelerate the growth of Kyiv’s investment ecosystem by uniting global investors to support infrastructure recovery and the modernization of Greater Kyiv.</div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="icon-wrap">
+                            <img src="images/goal_2.svg" alt="">
+                        </div>
+                        <div class="goal-content">Promote peer-to-peer exchange among European metropolises to share effective strategies for urban investment and resilience.</div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="icon-wrap">
+                            <img src="images/goal_3.svg" alt="">
+                        </div>
+                        <div class="goal-content">Highlight the power of social impact and innovation to drive inclusive growth, support Ukraine’s recovery, and contribute to a sustainable, equitable economy aligned with EU integration.</div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="icon-wrap">
+                            <img src="images/goal_4.svg" alt="">
+                        </div>
+                        <div class="goal-content">Foster collaboration between the public and private sectors to develop and implement solutions for the economic and social recovery of the Kyiv metropolitan area.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="key-topics">
+            <div class="container">
+                <h2 class="section-title">Key topics:</h2>
+                <div class="keys-wrap">
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>01</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">City-to-city cooperation for recovery and resilience</div>
+                    </div>
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>02</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">Investment strategies and public-private partnerships</div>
+                    </div>
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>03</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_3.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">Digital innovation, smart governance, and cybersecurity</div>
+                    </div>
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>04</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_4.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">Health tech, rehabilitation, and biotech collaboration</div>
+                    </div>
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>05</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_5.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">Industrial tech, automation, and advanced manufacturing</div>
+                    </div>
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>06</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_6.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">Smart mobility and sustainable urban infrastructure</div>
+                    </div>
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>07</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_7.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">Social entrepreneurship and inclusive economic growth</div>
+                    </div>
+                    <div class="key-item">
+                        <div class="top-row">
+                            <span>08</span>
+                            <div class="icon-wrap">
+                                <img src="images/key_8.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">Energy efficiency, renewables and climate resilience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="agenda-time">
+            <div class="container">
+                <div class="section-title"><span>agenda</span>2025</div>
+                <div class="time-wrap">
+                    <div class="top-row">
+                        <div class="columns">
+                            <div class="column left-column">
+                                <div class="btn btn-time">TIME SLOT*</div>
+                                <div class="btn btn-activity">ACTIVITY</div>
+                            </div>
+                            <div class="column right-column">
+                                <div class="btn btn-time">TIME SLOT*</div>
+                                <div class="btn btn-activity">ACTIVITY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conten-wrap">
+                        <div class="row">
+                            <div class="btn btn-time">08:00 - 09:00</div>
+                            <div class="btn btn-activity">Registration. Morning coffee</div>
+                        </div>
+                        <div class="row">
+                            <div class="btn btn-time">09:00 - 09:30</div>
+                            <div class="btn btn-activity">KEYNOTE SESSION <span>Ukraine and Europe: Building a Shared Future in Challenging Times</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="btn btn-time">09:30 - 10:50</div>
+                            <div class="btn btn-activity">High-Level <span>Panel Cities Driving Resilience in Times of Geopolitical Turbulence</span> </div>
+                        </div>
+                        <div class="row">
+                            <div class="btn btn-time">10:50 – 11:20</div>
+                            <div class="btn btn-activity">Coffee break/ Media outreach / Signing ceremony of memorandums</div>
+                        </div>
+                        <div class="row row-columns">
+                            <div class="sub-column left-sub-column">
+                                <div class="sub-row">
+                                    <div class="btn btn-time">11:20 - 11:30</div>
+                                    <div class="btn btn-activity">Inaugural Reflections <span>Setting the Investment Agenda</span></div>
+                                </div>
+                                <div class="sub-row">
+                                    <div class="btn btn-time">11:30 - 12:30</div>
+                                    <div class="btn btn-activity">Panel discussion 1 Investments Amidst Uncertainty</div>
+                                </div>
+                                <div class="sub-row">
+                                    <div class="btn btn-time">12:30 - 13:30</div>
+                                    <div class="btn btn-activity">Panel discussion 2 Digital Evolution for Economic Growth and Resilience</div>
+                                </div>
+                            </div>
+                            <div class="sub-column right-sub-column">
+                                <div class="sub-row">
+                                    <div class="btn btn-time">11:20 -13:30</div>
+                                    <div class="btn btn-activity"><span>Breakout Session 1</span> Innovative Energy Solutions for Resilience and Sustainable Growth</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row break-row">
+                            <div class="btn btn-time">13:30 - 14:30</div>
+                            <div class="btn btn-activity">Lunch</div>
+                        </div>
+                        <div class="row row-columns">
+                            <div class="sub-column left-sub-column">
+                                <div class="sub-row">
+                                    <div class="btn btn-time">14:30 - 15:15</div>
+                                    <div class="btn btn-activity">Session 1 Mobility & Urban Tech</div>
+                                </div>
+                                <div class="sub-row">
+                                    <div class="btn btn-time">15:15 - 16:00</div>
+                                    <div class="btn btn-activity">Session 2 Health & Biotech for Urban Well-Being</div>
+                                </div>
+                                <div class="sub-row">
+                                    <div class="btn btn-time">16:00 - 16:45</div>
+                                    <div class="btn btn-activity">Session 3 Advanced Manufacturing & Industrial Tech</div>
+                                </div>
+                            </div>
+                            <div class="sub-column right-sub-column">
+                                <div class="sub-row">
+                                    <div class="btn btn-time">14:30 -16:45</div>
+                                    <div class="btn btn-activity"><span>Breakout Session 2</span> Social Entrepreneurship for Kyiv’s Inclusive Growth and Recovery</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="btn btn-time">16:45 - 17:15</div>
+                            <div class="btn btn-activity">Closing Session From Berlin to Kyiv: A Shared Investment Agenda for the Future</div>
+                        </div>
+                        <div class="row">
+                            <div class="btn btn-time">17:15 - 17:30</div>
+                            <div class="btn btn-activity">Artistic integration</div>
+                        </div>
+                        <div class="row break-row">
+                            <div class="btn btn-time">16:45 - 17:15</div>
+                            <div class="btn btn-activity">Networking. Cocktails, Musical performance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="speakers">
+            <div class="container">
+                <h2 class="section-title">Speakers</h2>
+                <div class="speakers-wrap">
+                    <div class="speaker-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="speaker-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="speaker-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="speaker-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="speaker-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="speaker-item">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="section-title">partnership</h2>
+                <div class="partners-wrap">
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="partner-item">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="forum-tabs">
+            <div class="container">
+                <h2 class="section-title">Kyiv Investment Forum:</br> <span>Facts & Figures</span></h2>
+                <div class="tabs-wrap">
+                    <div class="tabs-title">
+                        <div class="tab-title active" data-tab-title="tab-0">kif 2023</div>
+                        <div class="tab-title" data-tab-title="tab-1">kif 2022</div>
+                        <div class="tab-title" data-tab-title="tab-2">kif 2021</div>
+                        <div class="tab-title" data-tab-title="tab-3">kif 2020</div>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab-content active" data-tab-content="tab-0">
+                            <div class="top-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="sub-title">1 Brussels Platform: <span>Sustainable Revival of Greater Kyiv</span></div>
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="image-wrap">
+                                            <img src="../public/images/tab-img-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="row">
+                                            <div class="name">Attendance:</div>
+                                            <div class="description">
+                                                <p>Reached over 500 attendees on-site, including more than  27 ambassadors and diplomatic representatives, 10 city delegations, EU policymakers, business leaders, and international financial institutions.</p>
+                                                <p>More than 2,000 participants joined via livestream.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="row">
+                                            <div class="name">Place:</div>
+                                            <div class="description">
+                                                <p>City of Brussels, Belgium</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="name">Data:</div>
+                                            <div class="description">
+                                                <p>16 November 2023</p>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="content">
+                                            <ul>
+                                                <li>Opened by Ursula von der Leyen with a strong  message of support for Kyiv’s transformation.</li>
+                                                <li>New Brussels–Kyiv Cooperation Memorandum signed to boost reconstruction and partnership.</li>
+                                                <li>Extended the Brussels Declaration: Barcelona, Tirana, and Metropolia Grand Paris joined the city platform for solidarity and joint urban development</li>
+                                                <li>European Investment Bank and Kyiv City Council signed agreement to modernize Kyiv’s metro system, supported by a €480,000 technical assistance grant.</li>
+                                                <li>Kyiv–Brussels business chambers signed cooperation agreement to foster investment.</li>
+                                                <li>Clear shift from aid to investment – positioning Kyiv as a partner in Europe’s shared future.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab-content="tab-1">
+                            <div class="top-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="sub-title">2 Brussels Platform: <span>Sustainable Revival of Greater Kyiv</span></div>
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="image-wrap">
+                                            <img src="../public/images/tab-img-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="row">
+                                            <div class="name">Attendance:</div>
+                                            <div class="description">
+                                                <p>Reached over 500 attendees on-site, including more than  27 ambassadors and diplomatic representatives, 10 city delegations, EU policymakers, business leaders, and international financial institutions.</p>
+                                                <p>More than 2,000 participants joined via livestream.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="row">
+                                            <div class="name">Place:</div>
+                                            <div class="description">
+                                                <p>City of Brussels, Belgium</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="name">Data:</div>
+                                            <div class="description">
+                                                <p>16 November 2023</p>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="content">
+                                            <ul>
+                                                <li>Opened by Ursula von der Leyen with a strong  message of support for Kyiv’s transformation.</li>
+                                                <li>New Brussels–Kyiv Cooperation Memorandum signed to boost reconstruction and partnership.</li>
+                                                <li>Extended the Brussels Declaration: Barcelona, Tirana, and Metropolia Grand Paris joined the city platform for solidarity and joint urban development</li>
+                                                <li>European Investment Bank and Kyiv City Council signed agreement to modernize Kyiv’s metro system, supported by a €480,000 technical assistance grant.</li>
+                                                <li>Kyiv–Brussels business chambers signed cooperation agreement to foster investment.</li>
+                                                <li>Clear shift from aid to investment – positioning Kyiv as a partner in Europe’s shared future.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab-content="tab-2">
+                            <div class="top-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="sub-title">3 Brussels Platform: <span>Sustainable Revival of Greater Kyiv</span></div>
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="image-wrap">
+                                            <img src="../public/images/tab-img-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="row">
+                                            <div class="name">Attendance:</div>
+                                            <div class="description">
+                                                <p>Reached over 500 attendees on-site, including more than  27 ambassadors and diplomatic representatives, 10 city delegations, EU policymakers, business leaders, and international financial institutions.</p>
+                                                <p>More than 2,000 participants joined via livestream.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="row">
+                                            <div class="name">Place:</div>
+                                            <div class="description">
+                                                <p>City of Brussels, Belgium</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="name">Data:</div>
+                                            <div class="description">
+                                                <p>16 November 2023</p>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="content">
+                                            <ul>
+                                                <li>Opened by Ursula von der Leyen with a strong  message of support for Kyiv’s transformation.</li>
+                                                <li>New Brussels–Kyiv Cooperation Memorandum signed to boost reconstruction and partnership.</li>
+                                                <li>Extended the Brussels Declaration: Barcelona, Tirana, and Metropolia Grand Paris joined the city platform for solidarity and joint urban development</li>
+                                                <li>European Investment Bank and Kyiv City Council signed agreement to modernize Kyiv’s metro system, supported by a €480,000 technical assistance grant.</li>
+                                                <li>Kyiv–Brussels business chambers signed cooperation agreement to foster investment.</li>
+                                                <li>Clear shift from aid to investment – positioning Kyiv as a partner in Europe’s shared future.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab-content="tab-3">
+                            <div class="top-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="sub-title">4 Brussels Platform: <span>Sustainable Revival of Greater Kyiv</span></div>
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="image-wrap">
+                                            <img src="../public/images/tab-img-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-row">
+                                <div class="columns">
+                                    <div class="column left-column">
+                                        <div class="row">
+                                            <div class="name">Attendance:</div>
+                                            <div class="description">
+                                                <p>Reached over 500 attendees on-site, including more than  27 ambassadors and diplomatic representatives, 10 city delegations, EU policymakers, business leaders, and international financial institutions.</p>
+                                                <p>More than 2,000 participants joined via livestream.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="row">
+                                            <div class="name">Place:</div>
+                                            <div class="description">
+                                                <p>City of Brussels, Belgium</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="name">Data:</div>
+                                            <div class="description">
+                                                <p>16 November 2023</p>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="column right-column">
+                                        <div class="content">
+                                            <ul>
+                                                <li>Opened by Ursula von der Leyen with a strong  message of support for Kyiv’s transformation.</li>
+                                                <li>New Brussels–Kyiv Cooperation Memorandum signed to boost reconstruction and partnership.</li>
+                                                <li>Extended the Brussels Declaration: Barcelona, Tirana, and Metropolia Grand Paris joined the city platform for solidarity and joint urban development</li>
+                                                <li>European Investment Bank and Kyiv City Council signed agreement to modernize Kyiv’s metro system, supported by a €480,000 technical assistance grant.</li>
+                                                <li>Kyiv–Brussels business chambers signed cooperation agreement to foster investment.</li>
+                                                <li>Clear shift from aid to investment – positioning Kyiv as a partner in Europe’s shared future.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <h2 class="section-title">News</h2>
+                <div class="columns">
+                    <div class="column left-column">
+                        <div class="featured-post">
+                            <div class="image-wrap">
+                                <a href="https://investinkyiv.info/?post_type=post&p=861"><img src="https://investinkyiv.info/wp-content/uploads/2024/02/Untitled-1.png" /></a>
+                            </div>
+                            <div class="news-meta">
+                                <div class="date">19 Лют 2024</div>
+                                <div class="description"><a href="https://investinkyiv.info/?post_type=post&p=861">The Kyiv Investment Forum 2023  in the Heart of Europe Drums up the International Support for Kyiv’s Recovery</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right-column">
+                        <div class="news-wrap">
+                            <div class="row">
+                                <div class="date">15 Лис 2023</div>
+                                <div class="description">
+                                    <a href="https://investinkyiv.info/?post_type=post&p=844">Kyiv Investment Forum 2023: Brussels Platform,  A European Initiative to Shape Kyiv&#8217;s Future</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="date">14 Вер 2023</div>
+                                <div class="description">
+                                    <a href="https://investinkyiv.info/?post_type=post&p=568">Kyiv Investment Forum 2023:<br>European Cities for the Resilient Future of Ukraine’s Capital</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="date">25 Жов 2022</div>
+                                <div class="description">
+                                    <a href="https://investinkyiv.info/?post_type=post&p=39">The Capital of the European Union Welcomes Kyiv Investment Forum</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="date">27 Жов 2022</div>
+                                <div class="description">
+                                    <a href="https://investinkyiv.info/?post_type=post&p=72">Kyiv Investment Forum 2021: it&#8217;s time for thecreative transformation of Greater Kyiv</a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="columns ">
+                <div class="column column-left">
+                    <div class="logo-wrap">
+                        <img src="../public/images/header_logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="column column-center">
+                    <div class="top-row">
+                        <div class="sub-columns">
+                            <div class="column left-column">Join us as influential minds come together
+to shape the future of Greater Kyiv
+                            </div>
+                            <div class="column right-column">
+                                <div class="btn-wrap">
+                                    <a class="btn-link btn-red" href="#">explore kif 2025</a>
+                                </div>
+                            </div>             
+                        </div>
+                    </div>
+                    <div class="navigation-row">
+                        <ul class="navigation">
+                            <li><a href="#">about kif 2025</a></li>
+                            <li><a href="#">agenda</a></li>
+                            <li><a href="#">speakers</a></li>
+                            <li><a href="#">parnters</a></li>
+                            <li><a href="#">news</a></li>  
+                        </ul>
+                    </div>
+                </div>
+                <div class="column column-right">
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram-link">
+                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_9_5591)">
+                            <path d="M22.48 30.2414C17.52 30.2414 12.56 30.2414 7.6 30.2414C7.28 30.1614 6.96 30.1614 6.64 30.0814C3.36 29.3614 1.2 27.2814 0.24 24.0814C0.08 23.6014 0.08 23.2014 0 22.7214C0 17.7614 0 12.8014 0 7.84144C0 7.76144 0.08 7.60144 0.08 7.52144C0.16 6.72144 0.32 5.92144 0.72 5.20144C2.24 2.00144 4.72 0.321437 8.24 0.321437C12.8 0.241437 17.36 0.321437 21.84 0.321437C23.28 0.321437 24.64 0.641437 25.84 1.36144C28.56 2.96144 30 5.44144 30 8.56144C30 13.0414 30 17.5214 30 22.0014C30 22.5614 30 23.1214 29.84 23.6814C29.12 26.9614 27.12 29.1214 23.84 30.0014C23.36 30.1614 22.88 30.1614 22.48 30.2414ZM28.24 15.2814C28.24 13.0414 28.24 10.8014 28.24 8.56144C28.24 8.08144 28.24 7.52144 28.08 7.04144C27.36 4.00144 24.88 2.00144 21.76 2.00144C17.28 2.00144 12.72 2.00144 8.24 2.00144C7.76 2.00144 7.28 2.00144 6.8 2.16144C3.76 2.88144 1.76 5.36144 1.76 8.48144C1.76 12.9614 1.76 17.5214 1.76 22.0014C1.76 22.4814 1.76 22.9614 1.92 23.4414C2.56 26.4014 5.12 28.4814 8.16 28.4814C12.72 28.4814 17.28 28.4814 21.84 28.4814C22.72 28.4814 23.68 28.3214 24.48 27.9214C26.96 26.7214 28.24 24.7214 28.24 22.0014C28.24 19.7614 28.24 17.5214 28.24 15.2814Z" fill="#005898"/>
+                            <path d="M15.04 23.4414C10.56 23.4414 6.80005 19.7614 6.80005 15.2814C6.80005 10.8014 10.48 7.12144 14.96 7.04144C19.44 7.04144 23.2 10.7214 23.2 15.2014C23.2 19.7614 19.52 23.4414 15.04 23.4414ZM21.44 15.2814C21.44 11.7614 18.56 8.80143 15.04 8.80143C11.52 8.80143 8.64005 11.6814 8.56005 15.2014C8.56005 18.7214 11.44 21.6814 14.96 21.6814C18.48 21.7614 21.44 18.8014 21.44 15.2814Z" fill="#005898"/>
+                            <path d="M23.44 8.96144C22.08 8.96144 21.04 7.84144 21.04 6.56144C21.04 5.28144 22.16 4.16144 23.44 4.16144C24.72 4.16144 25.84 5.28144 25.84 6.56144C25.84 7.84144 24.72 8.96144 23.44 8.96144ZM23.44 5.92144C23.12 5.92144 22.8 6.24144 22.8 6.56144C22.8 6.88144 23.12 7.28144 23.44 7.28144C23.76 7.28144 24.08 6.96144 24.08 6.64144C24.08 6.24144 23.76 5.92144 23.44 5.92144Z" fill="#005898"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_9_5591">
+                            <rect width="30" height="30" fill="white" transform="translate(0 0.24144)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link facebook-link">
+                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_9_5581)">
+                            <path d="M30 8.89262C30 8.41389 30 8.01496 29.9202 7.69581C29.2819 3.78624 26.0106 0.913895 22.0213 0.913895C17.3138 0.913895 12.6862 0.913895 7.97872 0.913895C7.5 0.913895 7.10106 0.913895 6.70213 0.993682C2.71277 1.71177 0 4.90326 0 8.97241C0 13.6001 0 18.2277 0 22.8554C0 23.3341 0 23.8128 0.0797872 24.132C0.638298 28.0416 3.90957 30.8341 7.89894 30.9139C9.65425 30.9139 11.4096 30.9139 13.2447 30.9139H15.3989C15.9574 30.9139 16.2766 30.5947 16.2766 30.0362C16.2766 26.6852 16.2766 23.3341 16.2766 19.9033C16.2766 19.265 15.9574 18.9458 15.3191 18.9458C14.7606 18.9458 14.2021 18.9458 13.6436 18.9458H12.766V16.5522H13.6436C14.2021 16.5522 14.7606 16.5522 15.3191 16.5522C15.9574 16.5522 16.2766 16.233 16.2766 15.5947V14.4777C16.2766 13.5203 16.2766 12.5628 16.2766 11.6054C16.2766 10.249 16.8351 9.29155 18.1915 8.73304C19.3085 8.25432 20.5851 8.01496 22.1011 8.17453C22.3404 8.17453 22.5798 8.25432 22.8989 8.25432H23.0585V10.4884H21.0638C19.7074 10.4884 18.9096 11.2064 18.8298 12.483C18.75 13.2011 18.8298 13.999 18.8298 14.7171C18.8298 15.0362 18.8298 15.2756 18.8298 15.5947C18.8298 16.233 19.1489 16.5522 19.7872 16.5522C20.4255 16.5522 21.0638 16.5522 21.7021 16.5522H22.6596L22.2606 18.9458H21.6223C20.984 18.9458 20.4255 18.9458 19.7872 18.9458C19.1489 18.9458 18.8298 19.265 18.8298 19.9033V20.1426V20.2224V30.0362C18.8298 30.2756 18.9096 30.515 19.0691 30.6745C19.2287 30.8341 19.4681 30.9139 19.7074 30.9139H20.4255C20.6649 30.9139 20.9043 30.9139 21.1436 30.9139C21.5426 30.9139 21.9415 30.9139 22.3404 30.9139C22.8191 30.9139 23.2979 30.8341 23.7766 30.7543C27.5266 29.9564 30.0798 26.8447 30.0798 22.9352C30 18.2277 30 13.6001 30 8.89262ZM20.4255 20.6213H21.2234C21.7021 20.6213 22.2606 20.6213 22.7394 20.6213C23.2979 20.6213 23.617 20.382 23.6968 19.9033C23.9362 18.5469 24.0957 17.2703 24.3351 15.9139C24.3351 15.6745 24.3351 15.4352 24.1755 15.2756C24.016 15.116 23.6968 14.9564 23.3777 14.9564C22.7394 14.9564 22.1011 14.9564 21.383 14.9564H20.4255V14.8767C20.4255 14.6373 20.4255 14.4777 20.4255 14.2384C20.4255 13.7596 20.4255 13.2011 20.4255 12.7224C20.4255 12.3235 20.5053 12.2437 20.984 12.2437H23.617C24.3351 12.2437 24.6543 11.9245 24.6543 11.2862C24.6543 10.1692 24.6543 8.97241 24.6543 7.85538C24.6543 7.21709 24.4149 6.97772 23.8564 6.89794C21.3032 6.41921 19.2287 6.57879 17.3936 7.37666C15.8777 8.01496 15 9.13198 14.6809 10.5682C14.6011 10.8873 14.6011 11.2064 14.6011 11.6054C14.6011 12.4033 14.6011 13.2011 14.6011 13.9192V15.0362H13.6436C13.0851 15.0362 12.5266 15.0362 11.9681 15.0362C11.3298 15.0362 11.0106 15.3554 11.0106 15.9139C11.0106 17.1905 11.0106 18.4671 11.0106 19.8235C11.0106 20.2224 11.1702 20.7011 11.9681 20.7011C12.6064 20.7011 13.2447 20.7011 13.883 20.7011H14.5213V29.3181H12.4468C10.9309 29.3181 9.49468 29.3181 7.97872 29.3181C4.78723 29.3181 2.31383 27.2437 1.67553 24.132C1.59574 23.8128 1.59574 23.4937 1.59574 23.0947C1.59574 18.3873 1.59574 13.6799 1.59574 8.97241C1.59574 5.8607 3.75 3.30751 6.8617 2.749C7.18085 2.58943 7.57979 2.58943 7.97872 2.58943C12.6064 2.58943 17.3138 2.58943 21.9415 2.58943C25.133 2.58943 27.6064 4.66389 28.1649 7.7756C28.2447 8.09475 28.2447 8.41389 28.2447 8.89262C28.2447 13.6001 28.2447 18.2277 28.2447 22.9352C28.2447 26.4458 25.4521 29.2384 21.9415 29.2384C21.5426 29.2384 21.1436 29.2384 20.7447 29.2384H20.4255V20.6213Z" fill="#005898"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_9_5581">
+                            <rect width="30" height="30" fill="white" transform="translate(0 0.913895)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="btn-wrap mobile-btn">
+                        <a class="btn-link btn-red" href="#">registration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-bg-wrap">
+            <img src="../public/images/footer_bg.svg" alt="">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
