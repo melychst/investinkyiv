@@ -279,6 +279,9 @@ body header .columns .sub-column-left .navigation-row ul li a:hover {
   color: #A8285D;
   transition: 0.2s;
 }
+body header .columns .sub-column-right {
+  position: relative;
+}
 @media only screen and (max-width: 1023px) {
   body header .columns .sub-column-right {
     order: 1;
@@ -336,6 +339,42 @@ body header .columns .social-links {
     width: 15px;
     height: 15px;
   }
+}
+body header .columns .header-mobile-navigation {
+  position: absolute;
+  width: 100%;
+  top: 36px;
+  left: 0px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+  transition: 0.2s;
+}
+body header .columns .header-mobile-navigation.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+  transition: 0.5s;
+}
+body header .columns .header-mobile-navigation ul li {
+  list-style: none;
+  border: #1F4E9D 2px solid;
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+}
+body header .columns .header-mobile-navigation ul li:last-child {
+  margin-bottom: 0px;
+}
+body header .columns .header-mobile-navigation ul li a {
+  font-family: Calibri;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  color: #1F4E9D;
 }
 body main section {
   display: none;
@@ -917,7 +956,6 @@ body main section.key-topics .keys-wrap .key-item .content {
   }
 }
 body main section.agenda-time {
-  display: block;
   padding: 105px 0px 105px;
 }
 body main section.agenda-time .section-title {
@@ -1696,17 +1734,52 @@ body footer .columns .column-center .navigation-row ul li a:hover {
   color: #A8285D;
   transition: 0.2s;
 }
+body footer .columns .column-right {
+  position: relative;
+}
 @media only screen and (max-width: 991px) {
   body footer .columns .column-right {
     order: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
 body footer .columns .column-right .mobile-btn {
   display: none;
+  grid-column: span 2;
 }
 @media only screen and (max-width: 991px) {
   body footer .columns .column-right .mobile-btn {
     display: block;
+  }
+}
+body footer .columns .column-right .mobile-burger {
+  display: none;
+}
+body footer .columns .column-right .mobile-burger svg {
+  width: 30px;
+  height: 30px;
+}
+@media only screen and (max-width: 576px) {
+  body footer .columns .column-right .mobile-burger svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  body footer .columns .column-right .mobile-burger {
+    display: block;
+  }
+}
+body footer .columns .column-right .mobile-burger .close-burger {
+  display: none;
+  position: relative;
+  top: -1px;
+}
+@media only screen and (max-width: 576px) {
+  body footer .columns .column-right .mobile-burger .close-burger {
+    top: 0px;
   }
 }
 body footer .columns .column-right .social-links {
@@ -1721,6 +1794,7 @@ body footer .columns .column-right .social-links {
     flex-direction: row;
     height: auto;
     margin-bottom: 10px;
+    justify-content: end;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -1731,6 +1805,50 @@ body footer .columns .column-right .social-links {
     width: 16px;
     height: 16px;
   }
+}
+@media only screen and (max-width: 991px) {
+  body footer .columns .column-right .social-links .social-link {
+    margin-left: 10px;
+  }
+  body footer .columns .column-right .social-links .social-link:first-child {
+    margin-left: 0px;
+  }
+}
+body footer .columns .column-right .footer-mobile-navigation {
+  position: absolute;
+  width: 100%;
+  top: 48px;
+  left: 0px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+  transition: 0.2s;
+}
+body footer .columns .column-right .footer-mobile-navigation.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+  transition: 0.5s;
+}
+body footer .columns .column-right .footer-mobile-navigation ul li {
+  list-style: none;
+  border: #1F4E9D 2px solid;
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+}
+body footer .columns .column-right .footer-mobile-navigation ul li:last-child {
+  margin-bottom: 0px;
+}
+body footer .columns .column-right .footer-mobile-navigation ul li a {
+  font-family: Calibri;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  color: #1F4E9D;
 }
 body footer .image-bg-wrap {
   margin-top: 20px;
